@@ -12,7 +12,7 @@ STORY = (
 )
 
 def main():
-    output_dir = os.getenv("MAKEFUN_OUTPUT_DIR", "/output")
+    output_dir = os.getenv("MAKEFUN_OUTPUT_DIR") or "/output"
     os.makedirs(output_dir, exist_ok=True)
     
     content = STORY.strip() + "\n"
